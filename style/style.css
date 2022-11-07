@@ -29,7 +29,7 @@ body{
         max-width: 970px;
     }
 }
-@media (max-width:992px){
+@media (max-width:991.98px){
     [class*="__container"]{
         max-width: 750px;
     }
@@ -80,6 +80,17 @@ body{
     justify-content: flex-end;
     flex: 0 0 252px;
 }
+@media (max-width:991.98px){
+    .header__container {
+        min-height: 80px;
+    }
+    .menu__item {
+        margin: 0px 30px 0px 0px;
+    }
+    .header__button {
+        flex: 0 0 170px;
+    }
+}
 .button {
     font-family: Raleway;
     text-transform: uppercase;
@@ -101,4 +112,23 @@ body{
 }
 .button_blue:hover{
     background: #2e62b5;   
+}
+
+.icon-menu{
+    position: relative;
+    flex: 0 0 30px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.icon-menu::before,
+.icon-menu::after{
+    content: "";
+    background-color: #000;
+    height: 2px;
+}
+.icon-menu span{
+    height: 2px;
+    background-color: #000;
 }

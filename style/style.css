@@ -69,6 +69,7 @@ body{
     margin: 0px 40px 0px 0px;
 }
 .menu__link {
+    position: relative;
     font-family: 'Raleway';
     text-transform: uppercase;
     font-weight: 700;
@@ -76,10 +77,21 @@ body{
     line-height: 120%;
     letter-spacing: 1px;
     color: #000;
+    transition: width 0.3s ease-out;
 }
-.menu__link:hover{
-    text-decoration: underline;
-    
+.menu__link::after{
+    content: "";
+    display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #000000; /*задаём цвет линии*/
+	transition: width 0.3s ease-out;
+}
+.menu__link:hover:after,
+.menu__link:focus:after {
+    width: 100%;
 }
 .header__button {
     position: relative;
@@ -129,6 +141,9 @@ body{
     .menu__link{
         color: #EC5863;
         font-size: 20px;
+    }
+    .menu__link::after{
+        background-color: #EC5863;
     }
 }
 @media (max-width:479.98px){

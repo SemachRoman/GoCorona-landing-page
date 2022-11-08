@@ -83,10 +83,10 @@ body{
     content: "";
     display: block;
 	position: absolute;
-	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-	width: 0;/*задаём длинну линии до наведения курсора*/
-	height: 2px; /*задаём ширину линии*/
-	background-color: #000000; /*задаём цвет линии*/
+	left: 0; 
+	width: 0;
+	height: 2px;
+	background-color: #000000;
 	transition: width 0.3s ease-out;
 }
 .menu__link:hover:after,
@@ -120,12 +120,23 @@ body{
         left: -100%;
         width: 100%;
         height: 100%;
+        overflow: auto;
         background-color: #fafafa;
         padding: 90px 15px 30px 15px;
         transition: left 0.3s ease 0s;
     }
     .header:target .menu__body{
         left: 0;
+    }
+    .header:target .menu__body::before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 80px;
+        width: 100%;
+        background-color: #ffffff;
+        z-index: 2;
     }
     .menu__list{
         flex-direction: column;

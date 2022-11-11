@@ -234,6 +234,10 @@ body{
     line-height: 126%;
     color: #000;
 }
+.block-text__text_mw{
+    max-width: 600px;
+    margin: 0 auto;
+}
 .block-text__title:not(:last-child){
     margin: 0px 0px 12px 0px;
 }
@@ -481,7 +485,6 @@ body{
     flex: 0 1 50%;
     position: relative;
     padding: 0px 0px 30% 0px;
-    
 }
 .experts__video iframe{
     position: absolute;
@@ -608,4 +611,12 @@ body{
         top: -20px;
         right: -15px;
     }
+}
+/* /////////////////////////////////////////////////// */
+.healthcare {
+}
+.healthcare__container {
+}
+.healthcare__block-text {
+    margin: 0px 0px 45px 0px;
 }
